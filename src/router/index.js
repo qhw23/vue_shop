@@ -19,7 +19,18 @@ const routes = [
   },
   {
     path: '/home',
-    component: () => import('@/views/Home.vue')
+    component: () => import('@/views/Home.vue'),
+    redirect:'/welcome',
+    children:[
+      {
+        path:'/welcome',
+        component:()=>import('@/views/Welcome.vue')
+      },
+      {
+        path:'/users',
+        component:()=>import('@/views/user/Users.vue')
+      }
+    ]
   }
 ]
 
