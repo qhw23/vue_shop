@@ -2,8 +2,6 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from '@/views/Login.vue'
 
-// 导入全局样式表
-import '@/assets/css/global.css'
 
 Vue.use(VueRouter)
 
@@ -37,6 +35,10 @@ const routes = [
       {
         path:'/roles',
         component:()=>import('@/views/power/Roles.vue')
+      },
+      {
+        path:'/categories',
+        component:()=>import('@/views/goods/Cate.vue')
       }
     ]
   }

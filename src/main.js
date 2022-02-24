@@ -8,6 +8,10 @@ import 'element-ui/lib/theme-chalk/index.css';
 
 // 引入第三方图标
 import '@/assets/fonts/iconfont.css'
+// 导入全局样式表
+import '@/assets/css/global.css'
+
+import TreeTable from 'vue-table-with-tree-grid'
 
 // 引入axios
 import axios from 'axios'
@@ -31,6 +35,8 @@ Vue.use(ElementUI);
 Vue.use(VueAxios, axios)
 
 Vue.config.productionTip = false
+
+Vue.component('tree-table',TreeTable)
 
 new Vue({
   router,
