@@ -18,39 +18,43 @@ const routes = [
   {
     path: '/home',
     component: () => import('@/views/Home.vue'),
-    redirect:'/welcome',
-    children:[
+    redirect: '/welcome',
+    children: [
       {
-        path:'/welcome',
-        component:()=>import('@/views/Welcome.vue')
+        path: '/welcome',
+        component: () => import('@/views/Welcome.vue')
       },
       {
-        path:'/users',
-        component:()=>import('@/views/user/Users.vue')
+        path: '/users',
+        component: () => import('@/views/user/Users.vue')
       },
       {
-        path:'/rights',
-        component:()=>import('@/views/power/Rights.vue')
+        path: '/rights',
+        component: () => import('@/views/power/Rights.vue')
       },
       {
-        path:'/roles',
-        component:()=>import('@/views/power/Roles.vue')
+        path: '/roles',
+        component: () => import('@/views/power/Roles.vue')
       },
       {
-        path:'/categories',
-        component:()=>import('@/views/goods/Cate.vue')
+        path: '/categories',
+        component: () => import('@/views/goods/Cate.vue')
       },
       {
-        path:'/params',
-        component:()=>import('@/views/goods/Params.vue')
+        path: '/params',
+        component: () => import('@/views/goods/Params.vue')
       },
       {
-        path:'/goods',
-        component:()=>import('@/views/goods/List.vue')
+        path: '/goods',
+        component: () => import('@/views/goods/List.vue')
       },
       {
-        path:'/goods/add',
-        component:()=>import('@/views/goods/Add.vue')
+        path: '/goods/add',
+        component: () => import('@/views/goods/Add.vue')
+      }, 
+      {
+        path:'/orders',
+        component:()=>import('@/views/order/Order.vue')
       }
     ]
   }
